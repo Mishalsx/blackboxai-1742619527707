@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Mazufa Records</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white dark:bg-gray-800 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <a href="index.html" class="flex items-center text-2xl font-bold gradient-text">
+                    Mazufa Records Admin
+                </a>
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2"><i class="fas fa-moon"></i></button>
+                    <span class="text-gray-700 dark:text-white">Admin Name</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <!-- Analytics Overview -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 class="text-lg font-semibold mb-4">Feature Usage</h3>
+                <canvas id="featureUsageChart"></canvas>
+            </div>
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 class="text-lg font-semibold mb-4">User Activity</h3>
+                <canvas id="userActivityChart"></canvas>
+            </div>
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 class="text-lg font-semibold mb-4">Performance</h3>
+                <canvas id="performanceChart"></canvas>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- AI Features Section -->
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold mb-4">AI Features</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span>Smart Audience Interaction</span>
+                        <label class="switch">
+                            <input type="checkbox" id="aiInteraction">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span>AI Music Enhancement</span>
+                        <label class="switch">
+                            <input type="checkbox" id="aiMusicEnhancement">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span>AI Content Recommendations</span>
+                        <label class="switch">
+                            <input type="checkbox" id="aiRecommendations">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Streaming Features -->
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold mb-4">Streaming Features</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span>Live Streaming</span>
+                        <label class="switch">
+                            <input type="checkbox" id="liveStreaming">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span>Virtual Concerts</span>
+                        <label class="switch">
+                            <input type="checkbox" id="virtualConcerts">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span>Metaverse Integration</span>
+                        <label class="switch">
+                            <input type="checkbox" id="metaverse">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Platform Features -->
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold mb-4">Platform Features</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span>Multi-language Support</span>
+                        <label class="switch">
+                            <input type="checkbox" id="multiLanguage">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span>Advanced Analytics</span>
+                        <label class="switch">
+                            <input type="checkbox" id="advancedAnalytics">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span>Custom UI Themes</span>
+                        <label class="switch">
+                            <input type="checkbox" id="customUI">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advertising Controls -->
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold mb-4">Advertising</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span>In-Stream Ads</span>
+                        <label class="switch">
+                            <input type="checkbox" id="inStreamAds">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span>Banner Ads</span>
+                        <label class="switch">
+                            <input type="checkbox" id="bannerAds">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span>Sponsored Content</span>
+                        <label class="switch">
+                            <input type="checkbox" id="sponsoredContent">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notification System -->
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold mb-4">Notifications</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span>Push Notifications</span>
+                        <label class="switch">
+                            <input type="checkbox" id="pushNotifications">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span>Email Notifications</span>
+                        <label class="switch">
+                            <input type="checkbox" id="emailNotifications">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span>In-App Alerts</span>
+                        <label class="switch">
+                            <input type="checkbox" id="inAppAlerts">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Features -->
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold mb-4">Security</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span>Two-Factor Auth</span>
+                        <label class="switch">
+                            <input type="checkbox" id="twoFactorAuth">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span>Content Protection</span>
+                        <label class="switch">
+                            <input type="checkbox" id="contentProtection">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span>DRM</span>
+                        <label class="switch">
+                            <input type="checkbox" id="drm">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Toggle Switch Styles */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+    </style>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
