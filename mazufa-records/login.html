@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Mazufa Records</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="light-mode min-h-screen flex flex-col bg-gray-50">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <a href="index.html" class="flex items-center text-2xl font-bold">Mazufa Records</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow flex items-center justify-center p-4">
+        <div class="max-w-md w-full bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-3xl font-bold text-center mb-8">Login</h2>
+            <form id="login-form" class="space-y-6">
+                <div>
+                    <input type="email" placeholder="Email" class="w-full p-3 rounded-lg border" required>
+                </div>
+                <div>
+                    <input type="password" placeholder="Password" class="w-full p-3 rounded-lg border" required>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded-lg">
+                    Sign In
+                </button>
+            </form>
+            <p class="text-center mt-6">
+                New user? <a href="signup.html" class="text-blue-600">Create account</a>
+            </p>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-4 text-center">
+        <p>© 2024 Mazufa Records</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
