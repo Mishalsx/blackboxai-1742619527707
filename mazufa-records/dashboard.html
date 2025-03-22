@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Mazufa Records</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="light-mode bg-gray-50">
+    <!-- Simple Sidebar -->
+    <div class="flex h-screen">
+        <aside class="w-64 bg-white shadow-lg p-6">
+            <h1 class="text-xl font-bold mb-8">Mazufa Records</h1>
+            <nav class="space-y-2">
+                <a href="#" class="block px-4 py-2 bg-blue-50 text-blue-600 rounded">Dashboard</a>
+                <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded">My Releases</a>
+                <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded">Analytics</a>
+                <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded">Earnings</a>
+                <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded">Settings</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+            <header class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl font-bold">Welcome to Your Dashboard</h2>
+                <button class="bg-blue-600 text-white px-4 py-2 rounded">Upload Music</button>
+            </header>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-3 gap-6 mb-8">
+                <div class="bg-white p-6 rounded shadow">
+                    <h3 class="text-gray-500 mb-2">Total Streams</h3>
+                    <p class="text-2xl font-bold">0</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow">
+                    <h3 class="text-gray-500 mb-2">Total Earnings</h3>
+                    <p class="text-2xl font-bold">$0.00</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow">
+                    <h3 class="text-gray-500 mb-2">Active Releases</h3>
+                    <p class="text-2xl font-bold">0</p>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <section class="bg-white p-6 rounded shadow">
+                <h3 class="text-xl font-bold mb-4">Recent Activity</h3>
+                <div class="text-gray-500 text-center py-8">
+                    No recent activity to show
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
