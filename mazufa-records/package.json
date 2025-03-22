@@ -1,0 +1,26 @@
+{
+  "name": "mazufa-records",
+  "version": "1.0.0",
+  "description": "Music distribution platform for artists",
+  "main": "js/main.js",
+  "scripts": {
+    "start": "python3 server.py",
+    "build:css": "tailwindcss -i ./css/styles.css -o ./dist/styles.css --minify",
+    "watch:css": "tailwindcss -i ./css/styles.css -o ./dist/styles.css --watch",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "three": "^0.160.0",
+    "chart.js": "^4.4.1",
+    "axios": "^1.6.5"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.33",
+    "jest": "^29.7.0",
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.1"
+  }
+}
