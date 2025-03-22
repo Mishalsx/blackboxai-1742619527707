@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MazufaKid - Music Distribution Made Easy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .platform-icon {
+            transition: transform 0.2s;
+        }
+        .platform-icon:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-blue-600 p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="text-white text-2xl font-bold">MAZUFAKID</div>
+            <div>
+                <button class="text-white hover:text-blue-200 font-medium">Sign in</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-600 py-20">
+        <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between gap-12">
+            <div class="lg:w-1/2 text-white">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">Be prolific.</h1>
+                <p class="text-xl mb-8 leading-relaxed">MazufaKid is the easiest way for musicians to get music into Spotify, Apple, Amazon, Tidal, TikTok, YouTube, and more.</p>
+                <p class="text-lg mb-4">Upload unlimited albums & songs for a year and get in stores 10-20x faster than any other distributor.</p>
+            </div>
+            <div class="lg:w-1/2 bg-white rounded-xl p-8 shadow-2xl">
+                <h2 class="text-2xl font-semibold mb-6">Musicians, sign up now.</h2>
+                <form class="space-y-4">
+                    <input type="email" placeholder="Email" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" autocomplete="email">
+                    <input type="password" placeholder="Password" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" autocomplete="new-password">
+                    <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-200">Sign up</button>
+                </form>
+                <div class="text-center my-6 text-gray-500">or</div>
+                <div class="space-y-3">
+                    <button class="w-full border border-gray-300 p-3 rounded-lg flex items-center justify-center space-x-2 hover:bg-gray-50 transition duration-200">
+                        <i class="fab fa-google text-red-500"></i>
+                        <span>Sign up with Google</span>
+                    </button>
+                    <button class="w-full bg-black text-white p-3 rounded-lg flex items-center justify-center space-x-2 hover:bg-gray-900 transition duration-200">
+                        <i class="fab fa-apple"></i>
+                        <span>Sign up with Apple</span>
+                    </button>
+                    <button class="w-full bg-[#1877F2] text-white p-3 rounded-lg flex items-center justify-center space-x-2 hover:bg-blue-600 transition duration-200">
+                        <i class="fab fa-facebook"></i>
+                        <span>Sign up with Facebook</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Device Mockup Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-600 to-blue-800 p-8">
+                    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-600/50 to-blue-800/50"></div>
+                    <div class="relative z-10">
+                        <div class="flex justify-center items-center">
+                            <div class="bg-black rounded-3xl p-4 shadow-2xl transform -rotate-12">
+                                <img src="https://images.pexels.com/photos/7149165/pexels-photo-7149165.jpeg" alt="Music Dashboard" class="rounded-2xl w-full max-w-lg">
+                            </div>
+                            <div class="bg-black rounded-3xl p-4 shadow-2xl transform rotate-12 -ml-20">
+                                <img src="https://images.pexels.com/photos/7149156/pexels-photo-7149156.jpeg" alt="Mobile App" class="rounded-2xl w-64">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16">Millions of musicians rely on MazufaKid.</h2>
+            <div class="text-center mb-16">
+                <div class="text-3xl font-bold mb-4">Pay only $22.99</div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">to upload unlimited albums & songs for a year and get in stores 10-20x faster than any other distributor.</p>
+            </div>
+            
+            <!-- Platform Icons -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-12 items-center max-w-4xl mx-auto">
+                <div class="platform-icon flex justify-center">
+                    <i class="fab fa-spotify text-[#1DB954] text-5xl hover:opacity-80"></i>
+                </div>
+                <div class="platform-icon flex justify-center">
+                    <i class="fab fa-apple text-black text-5xl hover:opacity-80"></i>
+                </div>
+                <div class="platform-icon flex justify-center">
+                    <i class="fab fa-tiktok text-black text-5xl hover:opacity-80"></i>
+                </div>
+                <div class="platform-icon flex justify-center">
+                    <i class="fab fa-amazon text-[#FF9900] text-5xl hover:opacity-80"></i>
+                </div>
+                <div class="platform-icon flex justify-center">
+                    <i class="fab fa-instagram text-[#E4405F] text-5xl hover:opacity-80"></i>
+                </div>
+                <div class="platform-icon flex justify-center">
+                    <i class="fab fa-youtube text-[#FF0000] text-5xl hover:opacity-80"></i>
+                </div>
+                <div class="platform-icon flex justify-center">
+                    <i class="fab fa-soundcloud text-[#FF3300] text-5xl hover:opacity-80"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-gray-600">
+                <p>&copy; 2023 MazufaKid. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
